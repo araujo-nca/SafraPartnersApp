@@ -41,11 +41,11 @@ class IntroSlides {
       headerBgColor: ColorPalette.primary,
       title: '',
       textStyle: const TextStyle(
-        fontSize: 17,
+        fontSize: 15,
         color: ColorPalette.light,
       ),
       description:
-          'Este serviço utilizará as seguintes informações pessoais para personalizar a sua experiência no app:\n\u2022 Identidade, nome, foto, endereço de e-mail e número de telefone\nO Safra Partners respeitará os termos de uso e a política de privacidade.\nAo continuar você consente com a utilização desses dados.',
+          'Este serviço utilizará as seguintes informações pessoais para personalizar a sua experiência no app:\n  \u2022 Dados pessoais: CPF, nome completo, estado, sexo, endereço, contato, profissão, nacionalidade e RG;\n  \u2022 Dados bancários: quais bancos você possui conta, renda mensal e patrimônio;\nO Safra Partners respeitará os termos de uso e a política de privacidade.\nAo continuar você consente com a utilização desses dados.',
     ),
   ];
 }
