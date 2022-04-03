@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../utils/color_palette.dart';
 import 'components/timeline_tiles.dart';
+import 'contract_three.dart';
 
 class ContractTwoPage extends StatelessWidget {
   const ContractTwoPage({Key? key}) : super(key: key);
@@ -45,7 +46,7 @@ class ContractTwoPage extends StatelessWidget {
                     children: TimelineTiles.horizontalTilesList(curPage: 2),
                   ),
                 ),
-                const SizedBox(height: 13),
+                const SizedBox(height: 5),
                 const Text(
                   'Informações',
                   style: TextStyle(
@@ -246,7 +247,7 @@ class ContractTwoPage extends StatelessWidget {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () => Get.to(() => const ContractTwoPage()),
+                      onPressed: () => Get.to(() => const ContractThreePage()),
                       style: ElevatedButton.styleFrom(
                         primary: ColorPalette.primary,
                         shape: RoundedRectangleBorder(

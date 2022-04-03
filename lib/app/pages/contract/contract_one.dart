@@ -46,7 +46,7 @@ class ContractOnePage extends StatelessWidget {
                     children: TimelineTiles.horizontalTilesList(curPage: 1),
                   ),
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 5),
                 const Text(
                   'Apresentação',
                   style: TextStyle(
@@ -79,10 +79,10 @@ class ContractOnePage extends StatelessWidget {
                 const SizedBox(height: 5),
                 Expanded(
                   child: SingleChildScrollView(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: Column(
                       children: [
-                        SelectableText(
+                        const SelectableText(
                           '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu. Nulla suscipit lacinia purus in mollis. Morbi sed justo fringilla enim rutrum blandit in quis urna. Sed tincidunt consectetur nibh, at tempus lectus venenatis vel. Integer leo est, dapibus vitae ipsum eu, dapibus sodales ante. Donec a elit rhoncus, suscipit tortor vel, malesuada turpis. Donec sollicitudin dictum erat ut tempus.
 
 Aliquam suscipit consequat tempus. Fusce in orci nec tortor scelerisque iaculis. Nam tempor varius urna, a egestas velit mattis et. Ut placerat lectus eget porta egestas. Ut dignissim facilisis mauris at malesuada. Sed iaculis congue ex, in fringilla massa consectetur quis. Vivamus varius ultrices elit in fringilla. Etiam aliquet, nulla quis rhoncus mollis, neque leo ultrices metus, sed mollis lectus orci sed ante. Aenean posuere elit quis sapien hendrerit, sed vestibulum metus lobortis. Pellentesque imperdiet pretium arcu, ut consequat mi facilisis commodo. Donec varius sit amet lacus vitae euismod. Vivamus tempus nisi sed scelerisque maximus. Suspendisse finibus ex augue, nec feugiat quam sodales sit amet. Mauris tellus lacus, commodo non tristique sed, efficitur sed justo. Duis sagittis blandit ligula, eu rutrum eros efficitur suscipit.
