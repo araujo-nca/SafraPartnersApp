@@ -16,7 +16,9 @@ class SafraPartnersApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Safra Partners',
         color: ColorPalette.primary,
         // theme: ThemeData(
