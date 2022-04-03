@@ -257,7 +257,7 @@ class TimelineTiles {
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     TextSpan(
                       text:
-                          ' dos dados e formulação das propostas em até X horas.',
+                          ' dos dados e formulação das propostas em até 3 horas.',
                     ),
                   ]),
             ),
