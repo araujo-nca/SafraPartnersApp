@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:projeto_hackathon/app/pages/intro/intro_page.dart';
 import 'package:projeto_hackathon/app/utils/color_palette.dart';
 
-import '../contract/contract_one.dart';
-
 class AuthPage extends StatelessWidget {
   const AuthPage({Key? key}) : super(key: key);
 

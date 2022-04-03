@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:projeto_hackathon/app/pages/auth/auth_page.dart';
 import 'package:projeto_hackathon/app/utils/color_palette.dart';
 
-import 'app/pages/intro/intro_page.dart';
-
 void main() {
   runApp(const SafraPartnersApp());
 }
