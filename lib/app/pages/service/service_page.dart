@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projeto_hackathon/app/pages/home/home_page.dart';
 
 import '../../utils/color_palette.dart';
 
@@ -22,7 +23,7 @@ class ServicePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        onPressed: () => Get.back(),
+                        onPressed: () => Get.offAll(() => HomePage()),
                         icon: const Icon(
                           Icons.arrow_back_ios,
                           color: ColorPalette.primary,
