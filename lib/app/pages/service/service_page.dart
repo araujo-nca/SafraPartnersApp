@@ -85,15 +85,15 @@ class ServicePage extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 10),
-                  Expanded(
+                  const Expanded(
                     child: SingleChildScrollView(
-                      child: const Text(
+                      child: Text(
                         '''Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu. Nulla suscipit lacinia purus in mollis. Morbi sed justo fringilla enim rutrum blandit in quis urna. Sed tincidunt consectetur nibh, at tempus lectus venenatis vel. Integer leo est, dapibus vitae ipsum eu, dapibus sodales ante. Donec a elit rhoncus, suscipit tortor vel, malesuada turpis. Donec sollicitudin dictum erat ut tempus.
 Aliquam suscipit consequat tempus. Fusce in orci nec tortor scelerisque iaculis. Nam tempor varius urna, a egestas velit mattis et. Ut placerat lectus eget porta egestas. Ut dignissim facilisis mauris at malesuada. Sed iaculis congue ex, in fringilla massa consectetur quis. Vivamus varius ultrices elit in fringilla.''',
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   SizedBox(
                     width: 130,
                     child: ElevatedButton(
@@ -106,15 +106,15 @@ Aliquam suscipit consequat tempus. Fusce in orci nec tortor scelerisque iaculis.
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
+                        children: const [
+                          Icon(
                             Icons.assignment,
                             color: ColorPalette.darkMinusOne,
                           ),
-                          const SizedBox(width: 10),
+                          SizedBox(width: 10),
                           Text(
                             'Contrato',
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: ColorPalette.darkMinusOne,
                             ),
                           ),
@@ -122,7 +122,7 @@ Aliquam suscipit consequat tempus. Fusce in orci nec tortor scelerisque iaculis.
                       ),
                     ),
                   ),
-                  Divider(
+                  const Divider(
                     height: 20,
                     thickness: 3,
                   ),
@@ -138,22 +138,22 @@ Aliquam suscipit consequat tempus. Fusce in orci nec tortor scelerisque iaculis.
                     textAlign: TextAlign.center,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Row(
-                            children: [
+                            children: const [
                               Icon(Icons.phone_outlined),
                               SizedBox(width: 3),
                               Text('(00) 00000-0000'),
                             ],
                           ),
-                          SizedBox(width: 30),
+                          const SizedBox(width: 30),
                           Row(
-                            children: [
+                            children: const [
                               Icon(Icons.open_in_new),
                               SizedBox(width: 3),
                               Text('www.website.com.br'),
@@ -165,15 +165,15 @@ Aliquam suscipit consequat tempus. Fusce in orci nec tortor scelerisque iaculis.
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Row(
-                            children: [
+                            children: const [
                               Icon(Icons.phone_outlined),
                               SizedBox(width: 3),
                               Text('(00) 00000-0000'),
                             ],
                           ),
-                          SizedBox(width: 30),
+                          const SizedBox(width: 30),
                           Row(
-                            children: [
+                            children: const [
                               Icon(Icons.email_outlined),
                               SizedBox(width: 3),
                               Text('email@email.com.br'),
