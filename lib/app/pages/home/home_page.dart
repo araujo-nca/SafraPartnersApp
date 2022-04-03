@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:projeto_hackathon/app/utils/color_palette.dart';
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     const double minHeight = 5;
-    const double maxHeight = 20;
+    const double maxHeight = 14;
 
     return Scaffold(
       body: SafeArea(
@@ -68,7 +69,97 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: minHeight),
-                      servicesRow(),
+                      CarouselSlider(
+                        options: CarouselOptions(
+                          height: 140,
+                          // initialPage: 0,
+                          enableInfiniteScroll: false,
+                          viewportFraction: 0.42,
+                        ),
+                        items: servicesData
+                            .map(
+                              (el) => Stack(
+                                alignment: Alignment.topCenter,
+                                children: [
+                                  Container(
+                                    height: 130,
+                                    width: 130,
+                                    margin: const EdgeInsets.only(bottom: 8),
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 5,
+                                      horizontal: 10,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: ColorPalette.primary,
+                                      borderRadius: BorderRadius.circular(15),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.centerRight,
+                                          child: Text(
+                                            el['date'],
+                                            style: const TextStyle(
+                                              color: ColorPalette.light,
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                        ),
+                                        Image.asset(
+                                          'assets/home/03.png',
+                                          scale: 1.2,
+                                        ),
+                                        const Text(
+                                          'Banco Safra',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: ColorPalette.light,
+                                          ),
+                                        ),
+                                        const Text(
+                                          'Nome do Serviço',
+                                          style: TextStyle(
+                                            color: ColorPalette.light,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: Alignment.bottomCenter,
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: ColorPalette.secondary,
+                                        borderRadius: BorderRadius.circular(15),
+                                      ),
+                                      height: 30,
+                                      width: 100,
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: const [
+                                          Text(
+                                            'Detalhes',
+                                            style: TextStyle(
+                                              color: ColorPalette.primary,
+                                            ),
+                                          ),
+                                          SizedBox(width: 1),
+                                          Icon(
+                                            Icons.arrow_forward_ios,
+                                            color: ColorPalette.primary,
+                                            size: 15,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                            .toList(),
+                      ),
                       const SizedBox(height: maxHeight),
                       const Align(
                         alignment: Alignment.centerLeft,
@@ -217,18 +308,18 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Serviços\nContratados',
                       style: TextStyle(
                         color: ColorPalette.light,
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 10),
                       child: Text(
-                        '4',
-                        style: TextStyle(
+                        '${servicesData.length}',
+                        style: const TextStyle(
                           color: ColorPalette.light,
                           fontWeight: FontWeight.bold,
                           fontSize: 50,
@@ -288,3 +379,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+const List<Map> servicesData = [
+  {'date': '28/03/2022'},
+  {'date': '01/04/2022'},
+  {'date': '01/04/2022'},
+  {'date': '02/04/2022'},
+  {'date': '03/04/2022'}
+];
