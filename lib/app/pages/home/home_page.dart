@@ -92,6 +92,14 @@ class _HomePageState extends State<HomePage> {
                                     decoration: BoxDecoration(
                                       color: ColorPalette.primary,
                                       borderRadius: BorderRadius.circular(15),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 3,
+                                          blurRadius: 5,
+                                          offset: const Offset(0, 5),
+                                        ),
+                                      ],
                                     ),
                                     child: Column(
                                       children: [
@@ -182,6 +190,14 @@ class _HomePageState extends State<HomePage> {
                         decoration: BoxDecoration(
                           color: ColorPalette.primary,
                           borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.5),
+                              spreadRadius: 3,
+                              blurRadius: 5,
+                              offset: const Offset(0, 5),
+                            ),
+                          ],
                         ),
                         child: Stack(
                           children: [
@@ -293,6 +309,14 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             color: ColorPalette.primary,
             borderRadius: BorderRadius.circular(radius),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: const Offset(0, 5),
+              ),
+            ],
           ),
           child: Stack(
             children: [
@@ -338,6 +362,14 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             color: ColorPalette.primary,
             borderRadius: BorderRadius.circular(radius),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: const Offset(0, 5),
+              ),
+            ],
           ),
           child: Stack(
             children: [

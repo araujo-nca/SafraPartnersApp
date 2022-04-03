@@ -165,7 +165,21 @@ class _ContractFourPageState extends State<ContractFourPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 width: double.maxFinite,
                 height: Get.height * 0.1,
-                color: ColorPalette.light,
+                decoration: BoxDecoration(
+                  color: ColorPalette.light,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: const Radius.circular(15),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 3,
+                      blurRadius: 5,
+                      offset: const Offset(0, -1),
+                    ),
+                  ],
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
