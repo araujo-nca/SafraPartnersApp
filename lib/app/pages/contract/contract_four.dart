@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projeto_hackathon/app/pages/service/service_page.dart';
 
 import '../../utils/color_palette.dart';
 import 'components/timeline_tiles.dart';
@@ -181,9 +182,13 @@ class _ContractFourPageState extends State<ContractFourPage> {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () => setState(() {
-                        _hasRequested = true;
-                      }),
+                      onPressed: () => {
+                        !_hasRequested
+                            ? setState(() {
+                                _hasRequested = true;
+                              })
+                            : Get.to(() => const ServicePage())
+                      },
                       style: ElevatedButton.styleFrom(
                         primary: ColorPalette.primary,
                         shape: RoundedRectangleBorder(
