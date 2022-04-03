@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:projeto_hackathon/app/pages/contract/contract_four.dart';
 
 import '../../utils/color_palette.dart';
 import 'components/timeline_tiles.dart';
@@ -27,7 +28,7 @@ class _ContractThreePageState extends State<ContractThreePage> {
 
   Column _timelineBody() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -96,7 +97,7 @@ class _ContractThreePageState extends State<ContractThreePage> {
 
   Column _proposesBody() {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -146,7 +147,7 @@ class _ContractThreePageState extends State<ContractThreePage> {
           shrinkWrap: true,
           itemCount: proposes.length,
           itemBuilder: (BuildContext context, int index) {
-            final Map<String, String> propose = proposes[index];
+            final Map propose = proposes[index];
 
             return Card(
               margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 7),
@@ -188,16 +189,16 @@ class _ContractThreePageState extends State<ContractThreePage> {
                       ),
                     ),
                     const SizedBox(height: 8),
-                    const Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu.',
-                    ),
+                    Text('${propose['description']}'),
                     const SizedBox(height: 3),
                     Align(
                       alignment: Alignment.centerRight,
                       child: SizedBox(
                         width: Get.width * 0.28,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.to(
+                            () => ContractFourPage(proposeInfo: propose),
+                          ),
                           style: ElevatedButton.styleFrom(
                             primary: ColorPalette.primary,
                             shape: RoundedRectangleBorder(
@@ -236,30 +237,40 @@ class _ContractThreePageState extends State<ContractThreePage> {
   }
 }
 
-const List<Map<String, String>> proposes = [
+const List<Map> proposes = [
   {
     'id': '01',
     'budget': 'R\$30.000,00',
     'date': '02/04/2022, às 13h',
+    'description':
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu.',
   },
   {
     'id': '02',
     'budget': 'R\$35.500,00',
     'date': '02/04/2022, às 14h',
+    'description':
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu.',
   },
   {
     'id': '03',
     'budget': 'R\$32.800,00',
     'date': '02/04/2022, às 15h',
+    'description':
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu.',
   },
   {
     'id': '04',
     'budget': 'R\$40.000,00',
     'date': '02/04/2022, às 16h',
+    'description':
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu.',
   },
   {
     'id': '05',
     'budget': 'R\$49.900,00',
     'date': '02/04/2022, às 17h',
+    'description':
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec tellus gravida, sagittis mauris eget, ultrices arcu.',
   }
 ];

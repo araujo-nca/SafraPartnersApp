@@ -15,7 +15,7 @@ class ContractTwoPage extends StatelessWidget {
         child: Stack(
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
