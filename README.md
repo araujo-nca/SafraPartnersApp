@@ -38,7 +38,7 @@ O Front-end do aplicativo oferece uma experiência amigável ao usuário do Safr
 
 -   Login:
 <div>
-<img src="screenshots/opbank.png" width="100">
+<img src="screenshots/01.png" width="100">
 </div>
 
 ---
