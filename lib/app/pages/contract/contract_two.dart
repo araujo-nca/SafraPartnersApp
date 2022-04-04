@@ -234,7 +234,7 @@ class ContractTwoPage extends StatelessWidget {
                   color: ColorPalette.light,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
-                    topRight: const Radius.circular(15),
+                    topRight: Radius.circular(15),
                   ),
                   boxShadow: [
                     BoxShadow(
