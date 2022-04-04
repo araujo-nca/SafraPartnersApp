@@ -6,7 +6,7 @@
 
 De acordo com uma pesquisa da PWC em 2019, no Brasil 95% das compras on-line utilizam marketplace.
 
-Em termos de faturamento via e-commerce as plataformas de marketplace possuem uma representação de 78% do valor total faturado equivalente a R$ 81 bilhões de reais no ano de 2020
+Em termos de faturamento via e-commerce as plataformas de marketplace possuem uma representação de 78% do valor total faturado equivalente a R$ 81 bilhões de reais no ano de 2020.
 
 ---
 
@@ -37,8 +37,9 @@ O Front-end do aplicativo oferece uma experiência amigável ao usuário do Safr
 ## Interface
 
 -   Login:
-
-![01](https://user-images.githubusercontent.com/55602953/161459175-69bc1682-2bc7-46ff-8e6e-7d50b6674d49.png)
+<div>
+<img src="screenshots/opbank.png" width="100">
+</div>
 
 ---
 
