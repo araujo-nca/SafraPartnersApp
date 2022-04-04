@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:projeto_hackathon/app/utils/color_palette.dart';
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     const double minHeight = 5;
-    const double maxHeight = 20;
+    const double maxHeight = 14;
 
     return Scaffold(
       body: SafeArea(
@@ -29,7 +30,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
                     children: [
                       headerRow(),
@@ -68,7 +69,119 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: minHeight),
-                      servicesRow(),
+                    ],
+                  ),
+                ),
+                CarouselSlider(
+                  options: CarouselOptions(
+                    height: 140,
+                    enableInfiniteScroll: false,
+                    viewportFraction: 0.38,
+                  ),
+                  items: servicesData
+                      .map(
+                        (el) => Stack(
+                          alignment: Alignment.topCenter,
+                          children: [
+                            Container(
+                              height: 130,
+                              width: 130,
+                              margin: const EdgeInsets.only(bottom: 13),
+                              padding: const EdgeInsets.symmetric(
+                                vertical: 5,
+                                horizontal: 10,
+                              ),
+                              decoration: BoxDecoration(
+                                color: ColorPalette.primary,
+                                borderRadius: BorderRadius.circular(15),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.grey.withOpacity(0.5),
+                                    spreadRadius: 3,
+                                    blurRadius: 5,
+                                    offset: const Offset(0, 5),
+                                  ),
+                                ],
+                              ),
+                              child: Column(
+                                children: [
+                                  Align(
+                                    alignment: Alignment.centerRight,
+                                    child: Text(
+                                      el['date'],
+                                      style: const TextStyle(
+                                        color: ColorPalette.light,
+                                        fontSize: 10,
+                                      ),
+                                    ),
+                                  ),
+                                  Image.asset(
+                                    'assets/home/03.png',
+                                    scale: 1.2,
+                                  ),
+                                  const Text(
+                                    'Banco Safra',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: ColorPalette.light,
+                                    ),
+                                  ),
+                                  const Text(
+                                    'Nome do Serviço',
+                                    style: TextStyle(
+                                      color: ColorPalette.light,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                margin: const EdgeInsets.only(bottom: 3),
+                                decoration: BoxDecoration(
+                                  color: ColorPalette.secondary,
+                                  borderRadius: BorderRadius.circular(15),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.grey.withOpacity(0.5),
+                                      spreadRadius: 3,
+                                      blurRadius: 5,
+                                      offset: const Offset(0, 3),
+                                    ),
+                                  ],
+                                ),
+                                height: 30,
+                                width: 100,
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Text(
+                                      'Detalhes',
+                                      style: TextStyle(
+                                        color: ColorPalette.primary,
+                                      ),
+                                    ),
+                                    SizedBox(width: 1),
+                                    Icon(
+                                      Icons.arrow_forward_ios,
+                                      color: ColorPalette.primary,
+                                      size: 15,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                      .toList(),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    children: [
                       const SizedBox(height: maxHeight),
                       const Align(
                         alignment: Alignment.centerLeft,
@@ -85,29 +198,36 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       const SizedBox(height: minHeight),
-                      Container(
-                        height: 200,
-                        width: double.maxFinite,
-                        decoration: BoxDecoration(
-                          color: ColorPalette.primary,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                        child: Stack(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 5),
-                              child: Align(
-                                alignment: Alignment.centerRight,
-                                child: Image.asset(
-                                  'assets/home/04.png',
-                                  height: double.maxFinite,
+                      InkWell(
+                        onTap: () => Get.to(() => const ContractOnePage()),
+                        child: Container(
+                          height: 200,
+                          width: double.maxFinite,
+                          decoration: BoxDecoration(
+                            color: ColorPalette.primary,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.5),
+                                spreadRadius: 3,
+                                blurRadius: 5,
+                                offset: const Offset(0, 5),
+                              ),
+                            ],
+                          ),
+                          child: Stack(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 5),
+                                child: Align(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.asset(
+                                    'assets/home/04.png',
+                                    height: double.maxFinite,
+                                  ),
                                 ),
                               ),
-                            ),
-                            InkWell(
-                              onTap: () =>
-                                  Get.to(() => const ContractOnePage()),
-                              child: Container(
+                              Container(
                                 padding:
                                     const EdgeInsets.fromLTRB(25, 10, 0, 10),
                                 width: Get.width * 0.60,
@@ -153,8 +273,8 @@ class _HomePageState extends State<HomePage> {
                                   ],
                                 ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       )
                     ],
@@ -194,7 +314,7 @@ class _HomePageState extends State<HomePage> {
     const double radius = 15;
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Container(
           height: cardHeight,
@@ -202,6 +322,14 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             color: ColorPalette.primary,
             borderRadius: BorderRadius.circular(radius),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: const Offset(0, 5),
+              ),
+            ],
           ),
           child: Stack(
             children: [
@@ -217,18 +345,18 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Serviços\nContratados',
                       style: TextStyle(
                         color: ColorPalette.light,
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 10),
                       child: Text(
-                        '4',
-                        style: TextStyle(
+                        '${servicesData.length}',
+                        style: const TextStyle(
                           color: ColorPalette.light,
                           fontWeight: FontWeight.bold,
                           fontSize: 50,
@@ -247,6 +375,14 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             color: ColorPalette.primary,
             borderRadius: BorderRadius.circular(radius),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 5,
+                offset: const Offset(0, 5),
+              ),
+            ],
           ),
           child: Stack(
             children: [
@@ -288,3 +424,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+const List<Map> servicesData = [
+  {'date': '28/03/2022'},
+  {'date': '01/04/2022'},
+  {'date': '01/04/2022'},
+  {'date': '02/04/2022'},
+  {'date': '03/04/2022'}
+];

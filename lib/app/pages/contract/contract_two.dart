@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../../utils/color_palette.dart';
 import 'components/timeline_tiles.dart';
+import 'contract_three.dart';
 
 class ContractTwoPage extends StatelessWidget {
   const ContractTwoPage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class ContractTwoPage extends StatelessWidget {
         child: Stack(
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -45,7 +46,7 @@ class ContractTwoPage extends StatelessWidget {
                     children: TimelineTiles.horizontalTilesList(curPage: 2),
                   ),
                 ),
-                const SizedBox(height: 13),
+                const SizedBox(height: 5),
                 const Text(
                   'Informações',
                   style: TextStyle(
@@ -229,7 +230,21 @@ class ContractTwoPage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 width: double.maxFinite,
                 height: Get.height * 0.1,
-                color: ColorPalette.light,
+                decoration: BoxDecoration(
+                  color: ColorPalette.light,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15),
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 3,
+                      blurRadius: 5,
+                      offset: const Offset(0, -1),
+                    ),
+                  ],
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -246,7 +261,7 @@ class ContractTwoPage extends StatelessWidget {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () => Get.to(() => const ContractTwoPage()),
+                      onPressed: () => Get.to(() => const ContractThreePage()),
                       style: ElevatedButton.styleFrom(
                         primary: ColorPalette.primary,
                         shape: RoundedRectangleBorder(
