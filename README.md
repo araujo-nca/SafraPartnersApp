@@ -38,13 +38,11 @@ O Front-end do aplicativo oferece uma experiência amigável ao usuário do Safr
 
 -   Login:
 
-<div>
-<img src="https://raw.githubusercontent.com/matgermano/Hackaton_Safra2022/main/login.png" width="250">
-</div>
+![01](https://user-images.githubusercontent.com/55602953/161459175-69bc1682-2bc7-46ff-8e6e-7d50b6674d49.png)
 
 ---
 
--   Solicitação do uso do Open Banking:
+-   Solicitação de uso do Open Banking:
 <div>
 <img src="https://raw.githubusercontent.com/matgermano/Hackaton_Safra2022/main/opbank.png" width="250">
 </div>
