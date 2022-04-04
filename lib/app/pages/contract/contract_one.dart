@@ -104,7 +104,7 @@ Aliquam placerat enim in nibh dignissim condimentum. Aenean vel nibh non nunc po
                   color: ColorPalette.light,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
-                    topRight: const Radius.circular(15),
+                    topRight: Radius.circular(15),
                   ),
                   boxShadow: [
                     BoxShadow(

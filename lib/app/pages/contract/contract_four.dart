@@ -175,8 +175,8 @@ class _ContractFourPageState extends State<ContractFourPage> {
                                 textAlign: TextAlign.center,
                                 overflow: TextOverflow.ellipsis,
                               ),
-                              SizedBox(height: 5),
-                              Container(
+                              const SizedBox(height: 5),
+                              SizedBox(
                                 width: Get.width * 0.5,
                                 height: 32,
                                 child: TextFormField(
@@ -215,7 +215,7 @@ class _ContractFourPageState extends State<ContractFourPage> {
                   color: ColorPalette.light,
                   borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(15),
-                    topRight: const Radius.circular(15),
+                    topRight: Radius.circular(15),
                   ),
                   boxShadow: [
                     BoxShadow(

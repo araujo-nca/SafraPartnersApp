@@ -23,7 +23,7 @@ class ServicePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        onPressed: () => Get.offAll(() => HomePage()),
+                        onPressed: () => Get.offAll(() => const HomePage()),
                         icon: const Icon(
                           Icons.arrow_back_ios,
                           color: ColorPalette.primary,

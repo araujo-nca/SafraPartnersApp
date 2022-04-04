@@ -139,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                             Align(
                               alignment: Alignment.bottomCenter,
                               child: Container(
-                                margin: EdgeInsets.only(bottom: 3),
+                                margin: const EdgeInsets.only(bottom: 3),
                                 decoration: BoxDecoration(
                                   color: ColorPalette.secondary,
                                   borderRadius: BorderRadius.circular(15),
