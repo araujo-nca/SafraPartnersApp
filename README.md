@@ -38,42 +38,62 @@ O Front-end do aplicativo oferece uma experiência amigável ao usuário do Safr
 
 -   Login:
 <div>
-<img src="screenshots/01.png" width="100">
+<img src="screenshots/01.png" width="250">
 </div>
 
----
-
--   Solicitação de uso do Open Banking:
+-   Introdução e solicitação de uso do Open Banking:
 <div>
-<img src="https://raw.githubusercontent.com/matgermano/Hackaton_Safra2022/main/opbank.png" width="250">
+<img src="screenshots/02.png" width="250">
+ <img src="screenshots/03.png" width="250">
+ <img src="screenshots/04.png" width="250">
+</div>
+
+-   Home:
+<div>
+<img src="screenshots/05.png" width="250">
+</div>
+
+-   Timeline do contrato:
+<div>
+<img src="screenshots/06.png" width="250">
+ <img src="screenshots/07.png" width="250">
+ <img src="screenshots/08.png" width="250">
+ <img src="screenshots/09.png" width="250">
+ <img src="screenshots/10.png" width="250">
+ <img src="screenshots/11.png" width="250">
+</div>
+
+-   Informações do serviço/fornecedor:
+<div>
+<img src="screenshots/12.png" width="250">
 </div>
 
 ---
 
 ## Uso (para teste):
 
-    1- Instalar o framework Flutter e o Android Studio (para uso do SDK).
-    2- Abrir o projeto pelo Android Studio.
-    3- Conectar ao computador um smatphone em modo depuração ou utilizar o emulador embutido na plataforma.
-    4- Executar o projeto no aparelho conectado.
+1. Instalar o framework Flutter e o Android Studio (para uso do SDK);
+2. Abrir o projeto pelo Android Studio (ou outro IDE compatível desejável);
+3. Conectar ao computador um smatphone em modo depuração ou utilizar um emulador;
+4. Executar o projeto no aparelho conectado.
 
-## Telas / Fluxo:
+## Fluxo:
 
-    1- Auth page:
-    	- Autenticação do usuário;
-    	- Recuperação de senha;
-    2- Intro page:
-    	- Introdução ao usuário sobre a plataforma;
-    	- Esclarecimento e confirmação dos dados a serem disponibilzados pelo usuário (Open Banking);
-    	- Mostrada apenas na primeira utilização do aplicativo;
-    3- Home page:
-    	- Visualização dos serviços contratados e serviços aguardando propostas;
-    	- Solicitação de novos serviços;
-    4- Contract page:
-    	- Timeline com as etapas necessárias para a contratação do serviço:
-    		- Apresentação do serviço escolhido;
-    		- Informações necessárias para contratação;
-    		- Visualização de propostas;
-    		- Detalhamento da proposta e finalização da contratação;
-    5- Service page:
-        - Contato com o fornecedor após a contratação;
+1. Auth page
+    - Autenticação do usuário;
+    - Recuperação de senha;
+2. Intro page
+    - Introdução ao usuário sobre a plataforma;
+    - Esclarecimento e confirmação dos dados a serem disponibilzados pelo usuário (Open Banking);
+    - Página disponibilizada apenas na primeira utilização do aplicativo;
+3. Home page
+    - Visualização dos serviços contratados e serviços aguardando propostas;
+    - Solicitação de novos serviços;
+4. Contract page
+    - Timeline com as etapas necessárias para a contratação do serviço:
+    - Apresentação do serviço escolhido;
+    - Informações necessárias para contratação;
+    - Visualização de propostas;
+    - Detalhamento da proposta e finalização da contratação;
+5. Service page
+    - Contato com o fornecedor após a contratação.
