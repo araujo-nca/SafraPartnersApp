@@ -143,7 +143,7 @@ class TimelineTiles {
                   ),
                   children: [
                     TextSpan(
-                        text: 'Conheça',
+                        text: 'Conhecer',
                         style: TextStyle(fontWeight: FontWeight.bold)),
                     TextSpan(text: ' o serviço.')
                   ]),
@@ -326,8 +326,9 @@ class TimelineTiles {
                   ),
                   children: [
                     TextSpan(
-                        text: 'Contrato',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                      text: 'Contrate',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
                     TextSpan(
                       text: ' o serviço que cabe no seu bolso!',
                     ),
